@@ -1,0 +1,30 @@
+[user]
+  email = roberto.te.ua@gmail.com
+  name = RobertoUa
+[alias]
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[color]
+    status = auto
+    diff = auto
+    branch = auto
+  ui = true
+[web]
+    browser = open
+
+[core]
+  editor = vim
+
+[diff]
+  tool = vimdiff
+[merge]
+  tool = vimdiff
+[difftool]
+  prompt = true
+[giggle]
+  main-window-maximized = false
+  main-window-geometry = 958x1061+0+17
+  history-view-vpane-position = 576
+  file-view-vpane-position = 1004
+  main-window-view = HistoryView
+[github]
+  user = RobertoUA

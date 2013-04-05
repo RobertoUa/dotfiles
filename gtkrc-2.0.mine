@@ -1,0 +1,11 @@
+style "no-resize-handle"
+{
+    GtkWindow::resize-grip-height = 0
+    GtkWindow::resize-grip-width = 0
+}
+
+class "GtkWidget" style "no-resize-handle"
+style "vimfix" {
+  bg[NORMAL] = "#2a2a2a" # this matches my gVim theme 'Normal' bg color.
+}
+widget "vim-main-window.*GtkForm" style "vimfix"
