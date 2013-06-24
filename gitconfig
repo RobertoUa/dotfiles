@@ -21,8 +21,8 @@
 [difftool]
   prompt = true
 [giggle]
-  main-window-maximized = false
-  main-window-geometry = 958x1061+0+17
+	main-window-maximized = false
+	main-window-geometry = 958x1078+0+0
   history-view-vpane-position = 576
   file-view-vpane-position = 1004
   main-window-view = HistoryView

@@ -73,7 +73,7 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
       w = 1     -- terminal width
       t = 0     -- distance from top edge
       l = 0     -- distance from left edge
-scratchPad = scratchpadSpawnActionCustom "urxvtc -name scratchpad"
+scratchPad = scratchpadSpawnActionCustom "urxvt -name scratchpad"
 
 
 
@@ -93,6 +93,7 @@ myManageHook = composeAll
     , className =? "Pidgin"         --> doShift "5"
     , className =? "xchat"          --> doShift "5"
     , className =? "skype"          --> doShift "5"
+    , className =? "yakuake"        --> doFloat
     , isFullscreen --> (doF W.focusDown <+> doFullFloat)
     -- Single monitor setups, or if the previous hook doesn't work
      --, isFullscreen --> doFullFloat
@@ -131,7 +132,6 @@ myKeys x  = M.union (M.fromList (newKeys x)) (keys xfceConfig x)
 newKeys conf@(XConfig {XMonad.modMask = modm}) = [
   ((modm, xK_d), spawn "dmenu_run -nb '#222222' -nf '#aaaaaa' -sb '#93d44f' -sf '#222222'"),  --Uses a colourscheme with dmenu
   ((modm, xK_p), spawn "dmenu_run"),  --Uses a colourscheme with dmenu
-  ((0, xK_Print), spawn "scrot")
-  , ((modm, xK_r), scratchPad)
+  ((modm, xK_r), scratchPad)
    ]
 --}}}
