@@ -10,6 +10,7 @@ import XMonad
 import XMonad.Core
 import qualified Data.Map as M
 
+import Data.Ratio ((%))
 import Data.List
 import XMonad.Config.Xfce
 import Graphics.X11.ExtraTypes.XF86
@@ -48,7 +49,6 @@ import qualified XMonad.Hooks.EwmhDesktops as Hook
 
 -- The main function.
 main = do
-   replace
    xmonad $ xfceConfig
       {
         normalBorderColor  = myInactiveBorderColor
@@ -73,7 +73,7 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
       w = 1     -- terminal width
       t = 0     -- distance from top edge
       l = 0     -- distance from left edge
-scratchPad = scratchpadSpawnActionCustom "urxvt -name scratchpad"
+scratchPad = scratchpadSpawnActionCustom "konsole -name scratchpad"
 
 
 
@@ -93,7 +93,8 @@ myManageHook = composeAll
     , className =? "Pidgin"         --> doShift "5"
     , className =? "xchat"          --> doShift "5"
     , className =? "skype"          --> doShift "5"
-    , className =? "yakuake"        --> doFloat
+    , className =? "guake"          --> doIgnore
+    {-, className =? "yakuake"        --> doFloat-}
     , isFullscreen --> (doF W.focusDown <+> doFullFloat)
     -- Single monitor setups, or if the previous hook doesn't work
      --, isFullscreen --> doFullFloat
@@ -103,7 +104,7 @@ myManageHook2 = composeAll. concat $
                 [ [ className =? c --> doCenterFloat| c <- floats]
                 , [ resource =? r --> doIgnore | r <- ignore]
                 , [ resource =? "gecko" --> doF (W.shift "net") ]
-                , [ isFullscreen --> doFullFloat]
+                , [ isFullscreen --> (doF W.focusDown <+> doFullFloat)]
                 , [ isDialog --> doCenterFloat]]
  where floats = ["sdlpal", "MPlayer", "Gimp", "qemu-system-x86_64", "Gnome-typing-monitor", "Vlc", "Dia", "DDMS", "Audacious", "Wine"]
        ignore = []

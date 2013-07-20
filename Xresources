@@ -1,6 +1,9 @@
 Xft*dpi:                96
-Xft*antialias:          false
+Xft*antialias:          true
 Xft*hinting:            full
+
+!URxvt.depth: 32
+!URxvt.background: [95]#000000
 
 URxvt*geometry: 85x16
 URxvt*fading:        0
@@ -33,11 +36,11 @@ URxvt*saveLines:32767
 URxvt*troughColor:#000000
 URxvt*scrollColor:#222222
 URxvt*font: xft:Monaco
-!:Medium:pixelsize=16
+:Medium:pixelsize=10
 
 URxvt*urgentOnBell: true
 
-URxvt*perl-ext-common: default,matcher,-option-popup,-selection-popup,-realine,tabbed,clipboard
+URxvt*perl-ext-common: default,matcher,-option-popup,-selection-popup,-realine,clipboard
 URxvt*matcher.button: 1
 URxvt*urlLauncher: google-chrome
 urxvt.borderless: true
