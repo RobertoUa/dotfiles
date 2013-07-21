@@ -1,15 +1,15 @@
 [user]
   email = roberto.te.ua@gmail.com
-  name = RobertoUa
+  name = Volodymyr Barna
 [alias]
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [color]
     status = auto
     diff = auto
     branch = auto
-  ui = true
+    ui = true
 [web]
-    browser = open
+    browser = firefox-nightly
 
 [core]
   editor = vim

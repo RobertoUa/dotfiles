@@ -28,20 +28,10 @@ zstyle ':prezto:load' pmodule \
   'terminal' \
   'editor' \
   'history' \
-  'syntax-highlighting' \
-  'history-substring-search' \
   'directory' \
   'spectrum' \
-  'gnu-utility' \
   'utility' \
-  'tmux' \
-  'ruby' \
-  'pacman' \
-  'git' \
   'completion' \
-  'command-not-found' \
-  'fasd' \
-  'rails' \
   'prompt'
 
 #
@@ -49,8 +39,7 @@ zstyle ':prezto:load' pmodule \
 #
 
 # Set the key mapping style to 'emacs' or 'vi'.
-#zstyle ':prezto:module:editor' keymap 'emacs'
-zstyle ':prezto:module:editor' keymap 'vi'
+zstyle ':prezto:module:editor' keymap 'emacs'
 
 # Auto convert .... to ../..
 # zstyle ':prezto:module:editor' dot-expansion 'yes'
@@ -87,7 +76,7 @@ zstyle ':prezto:module:editor' keymap 'vi'
 #
 
 # Set the Pacman frontend.
-zstyle ':prezto:module:pacman' frontend 'yaourt'
+# zstyle ':prezto:module:pacman' frontend 'yaourt'
 
 #
 # Prompt
@@ -118,12 +107,12 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 
 # Set syntax highlighters.
 # By default, only the main highlighter is enabled.
- zstyle ':prezto:module:syntax-highlighting' highlighters \
-   'main' \
-   'brackets' \
-   'pattern' \
-   'cursor' \
-   'root'
+# zstyle ':prezto:module:syntax-highlighting' highlighters \
+#   'main' \
+#   'brackets' \
+#   'pattern' \
+#   'cursor' \
+#   'root'
 #
 # Set syntax highlighting styles.
 # zstyle ':prezto:module:syntax-highlighting' styles \
@@ -144,5 +133,5 @@ zstyle ':prezto:module:terminal' auto-title 'yes'
 #
 
 # Auto start a session when Zsh is launched.
-zstyle ':prezto:module:tmux' auto-start 'yes'
+# zstyle ':prezto:module:tmux' auto-start 'yes'
 
