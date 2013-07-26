@@ -1,4 +1,4 @@
-export PATH=~/bin:/home/roberto/.cabal/bin:/usr/share/perl5/vendor_perl/auto/share/dist/Cope:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl:/opt/java6/jre/bin:/usr/bin/vendor_perl/
+export PATH=~/bin:/home/roberto/.cabal/bin:/usr/share/perl5/vendor_perl/auto/share/dist/Cope:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl:/opt/java/bin:/usr/bin/vendor_perl/
 export BROWSER=firefox-nightly
 export TERM=screen-256color
 export PYTHONPATH=/usr/lib/python3.3/site-packages

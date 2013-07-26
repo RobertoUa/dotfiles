@@ -31,6 +31,7 @@ import XMonad.Layout.Fullscreen
 import XMonad.Layout.Spiral
 import XMonad.Layout.Tabbed
 import XMonad.Hooks.SetWMName
+import XMonad.Hooks.ICCCMFocus
 import XMonad.Actions.GridSelect
 
 import XMonad.Hooks.DynamicLog
@@ -60,6 +61,7 @@ main = do
       , layoutHook = smartBorders $ myLayout
       , manageHook = manageDocks <+> myManageHook <+> myManageHook2 <+> manageScratchPad
       , startupHook = setWMName "LG3D"
+      , logHook = takeTopFocus
       , focusFollowsMouse = False
       , workspaces = map show [1..9]
       , handleEventHook = Hook.fullscreenEventHook
