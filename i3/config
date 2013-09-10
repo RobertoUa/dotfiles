@@ -22,6 +22,8 @@ font xft:Monaco 8
 
 focus_follows_mouse no
 exec --no-startup-id sh ~/.fehbg
+bindsym $mod+F12 exec --no-startup-id java -jar ~/Downloads/screenshoter.jar
+bindsym XF86AudioPlay exec --no-startup-id exaile --play-pause
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

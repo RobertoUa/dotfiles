@@ -5,6 +5,8 @@ export TERM=screen-256color
 export VBOX_USB=usbfs
 export M2_HOME=/opt/maven
 export JAVA_HOME=/opt/java6
+#export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
+export JAVA_FONTS=/usr/share/fonts/TTF
 
 export RUBY_HEAP_MIN_SLOTS=1000000
 export RUBY_HEAP_FREE_MIN=500000
@@ -20,6 +22,8 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
+source ~/mvncolor.sh
+
 alias sbl="sudo subl"
 alias tmux="tmux -2"
 alias sr="./bin/rails"
@@ -28,3 +32,4 @@ alias sc="./bin/rails console"
 alias sspec="spring rspec"
 alias gst="git status"
 bindkey -M viins "^R" history-incremental-search-backward
+alias rm="nocorrect trash"
