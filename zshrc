@@ -6,7 +6,7 @@ export VBOX_USB=usbfs
 export M2_HOME=/opt/maven
 export JAVA_HOME=/opt/java6
 #export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
-export JAVA_FONTS=/usr/share/fonts/TTF
+#export JAVA_FONTS=/usr/share/fonts/TTF
 
 export RUBY_HEAP_MIN_SLOTS=1000000
 export RUBY_HEAP_FREE_MIN=500000
