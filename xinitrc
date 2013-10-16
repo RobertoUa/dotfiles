@@ -22,10 +22,11 @@ clipit &
 
 exaile &
 skypetab-ng --disable-cleanlooks -style GTK &
-firefox &
+#firefox &
+google-chrome-unstable &
 pulseaudio --start
 xset m 0 0
-compton -cGfb -D 5
+#compton -cGfb -D 5
 volumeicon &
 udiskie &
 

@@ -1,5 +1,5 @@
-export PATH=~/bin:/home/roberto/.cabal/bin:/usr/share/perl5/vendor_perl/auto/share/dist/Cope:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl:/opt/java6/bin:/usr/bin/vendor_perl/:~/Documents/play-2.0.4
-export BROWSER=firefox-nightly
+export PATH=~/bin:/home/roberto/.cabal/bin:/usr/share/perl5/vendor_perl/auto/share/dist/Cope:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl:/opt/java6/bin:/usr/bin/vendor_perl/:~/Documents/Libraries/play-2.0.4
+export BROWSER=google-chrome-unstable
 export TERM=screen-256color
 #export PYTHONPATH=/usr/lib/python3.3/site-packages
 export VBOX_USB=usbfs
@@ -31,5 +31,33 @@ alias sake="spring rake"
 alias sc="./bin/rails console"
 alias sspec="spring rspec"
 alias gst="git status"
-bindkey -M viins "^R" history-incremental-search-backward
 alias rm="nocorrect trash"
+bindkey "^X" _expand_alias # ctrl+x to expand alias
+alias r="ranger"
+
+
+export KEYTIMEOUT=1 # sets delay for vi mode to 0.1 sec
+# Use vim cli mode
+bindkey '^P' up-history
+bindkey '^N' down-history
+
+# ctrl-w removed word backwards
+bindkey '^w' backward-kill-word
+
+# ctrl-r starts searching history backward
+bindkey '^r' history-incremental-search-backward
+
+xdg-mime default google-chrome.desktop x-scheme-handler/http
+xdg-mime default google-chrome.desktop x-scheme-handler/https
+
+xdg-mime default google-chrome.desktop x-scheme-handler/http
+xdg-mime default google-chrome.desktop x-scheme-handler/https
+xdg-mime default google-chrome.desktop x-scheme-handler/ftp
+xdg-mime default google-chrome.desktop x-scheme-handler/chrome
+xdg-mime default google-chrome.desktop text/html
+xdg-mime default google-chrome.desktop application/x-extension-htm
+xdg-mime default google-chrome.desktop application/x-extension-html
+xdg-mime default google-chrome.desktop application/x-extension-shtml
+xdg-mime default google-chrome.desktop application/xhtml+xml
+xdg-mime default google-chrome.desktop application/x-extension-xhtml
+xdg-mime default google-chrome.desktop application/x-extension-xht
