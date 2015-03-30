@@ -28,6 +28,9 @@ zstyle ':prezto:load' pmodule \
   'terminal' \
   'editor' \
   'history' \
+  'homebrew' \
+  'node' \
+  'osx' \
   'syntax-highlighting' \
   'history-substring-search' \
   'directory' \

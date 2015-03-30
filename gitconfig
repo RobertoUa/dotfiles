@@ -13,7 +13,7 @@
     browser = firefox-nightly
 
 [core]
-  editor = vim
+	editor = /usr/local/bin/vim
 	excludesfile = ~/.gitignore
 
 [diff]
@@ -34,6 +34,6 @@
 	default = simple
 
 [pager]
-  log = diff-highlight | less
-  show = diff-highlight | less
-  diff = diff-highlight | less
+  ;log = diff-highlight | less
+  ;show = diff-highlight | less
+  ;diff = icdiff
