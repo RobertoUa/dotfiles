@@ -1,3 +1,8 @@
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+export ANDROID_HOME=/usr/local/Cellar/android-sdk/24.1.2
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export PATH=$PATH:~/bin:/home/roberto/.cabal/bin:/usr/share/perl5/vendor_perl/auto/share/dist/Cope:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl:/usr/bin/vendor_perl/:~/Documents/play-2.2.5:/usr/local/bin/
 export BROWSER=google-chrome-unstable
 export TERM=screen-256color
@@ -10,6 +15,11 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)
 #export JAVA_FONTS=/usr/share/fonts/TTF
 export MAVEN_OPTS="-Xms1024m -Xmx4096m -XX:PermSize=1024m"
 
+#docker
+export DOCKER_CERT_PATH=/Users/roberto/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://192.168.59.103:2376
+
 #nvm
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
@@ -21,9 +31,6 @@ export RUBY_GC_MALLOC_LIMIT=100000000
 
 #export vblank_mode=0
 source "${ZDOTDIR:-$HOME}/.archlinux.zsh"
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 

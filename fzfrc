@@ -52,16 +52,16 @@ fshow() {
     done < <(sed '1d;s/^[^a-z0-9]*//;/^$/d' <<< "$out" | awk '{print $1}')
   done
 }
-unalias z
-z() {
-  if [[ -z "$*" ]]; then
-    cd "$(_z -l 2>&1 | fzf +s --tac | sed 's/^[0-9,.]* *//')"
-  else
-    _last_z_args="$@"
-    _z "$@"
-  fi
-}
+#unalias z
+#z() {
+  #if [[ -z "$*" ]]; then
+    #cd "$(_z -l 2>&1 | fzf +s --tac | sed 's/^[0-9,.]* *//')"
+  #else
+    #_last_z_args="$@"
+    #_z "$@"
+  #fi
+#}
 
-zz() {
-  cd "$(_z -l 2>&1 | sed -n 's/^[0-9,.]* *//' | fzf -q $_last_z_args)"
-}
+#zz() {
+  #cd "$(_z -l 2>&1 | sed -n 's/^[0-9,.]* *//' | fzf -q $_last_z_args)"
+#}
