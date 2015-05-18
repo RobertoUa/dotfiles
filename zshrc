@@ -10,7 +10,7 @@ export TERM=screen-256color
 export VBOX_USB=usbfs
 unset M2_HOME
 #export M2_HOME=/usr/local/Cellar/maven/3.2.3
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 #export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
 #export JAVA_FONTS=/usr/share/fonts/TTF
 export MAVEN_OPTS="-Xms1024m -Xmx4096m -XX:PermSize=1024m"
@@ -19,6 +19,10 @@ export MAVEN_OPTS="-Xms1024m -Xmx4096m -XX:PermSize=1024m"
 export DOCKER_CERT_PATH=/Users/roberto/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 export DOCKER_HOST=tcp://192.168.59.103:2376
+
+#locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 #nvm
 export NVM_DIR=~/.nvm
