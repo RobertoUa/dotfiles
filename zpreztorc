@@ -43,7 +43,10 @@ zstyle ':prezto:load' pmodule \
   'command-not-found' \
   'fasd' \
   'archive' \
-  'prompt'
+  'prompt' 
+  #\
+  #'autosuggestions'
+
 
 #
 # Editor

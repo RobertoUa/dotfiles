@@ -2,9 +2,13 @@ nmap gu :action Vcs.RollbackChangedLines<CR>
 nmap gn :action VcsShowNextChangeMarker<CR>
 nmap gp :action VcsShowPrevChangeMarker<CR>
 nmap gr :action RenameElement<CR>i
+map gf :action FindUsages<CR>
+map ,, :action GotoFile<CR>
+map ,r :action Refactorings.QuickListPopupAction<CR>i
 
 " search settings
 set incsearch           " Incremental search
 set hlsearch            " Highlight search match
 set ignorecase          " Do case insensitive matching
 set smartcase           " do not ignore if search pattern has CAPS
+set surround
