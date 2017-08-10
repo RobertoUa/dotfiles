@@ -1,10 +1,59 @@
+let mapleader = ","
+
 nmap gu :action Vcs.RollbackChangedLines<CR>
 nmap gn :action VcsShowNextChangeMarker<CR>
 nmap gp :action VcsShowPrevChangeMarker<CR>
-nmap gr :action RenameElement<CR>i
-map gf :action FindUsages<CR>
-map ,, :action GotoFile<CR>
-map ,r :action Refactorings.QuickListPopupAction<CR>i
+nmap <Space> :action SearchEverywhere<Return>
+
+nmap M :action ToggleBookmarkWithMnemonic<Return>
+nmap m :action ShowBookmarks<Return>
+
+nnoremap ]e :action GotoNextError<cr>
+nnoremap [e :action GotoPreviousError<cr>
+
+"nmap [ :action Back<Return>
+"nmap ] :action Forward<Return>
+
+map <C-i> :action Forward<cr>
+map <C-o> :action Back<cr>
+
+nnoremap <leader>, :action GotoFile<CR>
+nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
+
+
+nnoremap <leader>fu :action FindUsages<cr>
+nnoremap <leader>su :action ShowUsages<cr>
+
+nnoremap <leader>bb :action ToggleLineBreakpoint<cr>
+nnoremap <leader>br :action ViewBreakpoints<cr>
+nnoremap <leader>oi :action OptimizeImports<cr>
+
+nnoremap <leader>re :action RenameElement<cr>
+nnoremap <leader>rf :action RenameFile<cr>
+
+nnoremap <leader>mv :action ActivateMavenProjectsToolWindow<cr>
+
+nnoremap <leader>dc :action ChooseDebugConfiguration<cr>
+nnoremap <leader>rc :action ChooseRunConfiguration<cr>
+
+nnoremap <leader>q  :action CloseActiveTab<cr>
+
+nnoremap <leader>gi :action GotoImplementation<cr>
+nnoremap <leader>gs :action GotoSuperMethod<cr>
+nnoremap <leader>gd :action GotoDeclaration<cr>
+nnoremap <leader>gt :action GotoTest<cr>
+
+nnoremap <leader>dr :action RunToCursor<cr>
+
+nnoremap <leader>og :action GenerateGetterAndSetter<cr>
+nnoremap <leader>oe :action GenerateEquals<cr>
+nnoremap <leader>os :action Actions.ActionsPlugin.GenerateToString<cr>
+
+
+
+"nnoremap / :action Find<CR>
+"nnoremap n :action FindNext<CR>
+"nnoremap N :action FindPrevious<CR>
 
 " search settings
 set incsearch           " Incremental search
