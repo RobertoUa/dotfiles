@@ -41,7 +41,9 @@ nnoremap <leader>q  :action CloseActiveTab<cr>
 nnoremap <leader>gi :action GotoImplementation<cr>
 nnoremap <leader>gs :action GotoSuperMethod<cr>
 nnoremap <leader>gd :action GotoDeclaration<cr>
+nnoremap <leader>gg :action GotoTypeDeclaration<cr>
 nnoremap <leader>gt :action GotoTest<cr>
+
 
 nnoremap <leader>dr :action RunToCursor<cr>
 
