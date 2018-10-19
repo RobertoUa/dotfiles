@@ -32,43 +32,16 @@ export HISTFILE=/Users/vbarna/.zhistory
 #source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 #source ~/.oh_zhrc
 
-source /usr/local/share/antigen/antigen.zsh
+#source /usr/local/share/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
-antigen use oh-my-zsh
-
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
-antigen bundle command-not-found
-antigen bundle brew
-antigen bundle scala
-antigen bundle httpie
-antigen bundle cp
-antigen bundle osx
-antigen bundle mvn
-antigen bundle fasd
-antigen bundle vi-mode
-antigen bundle history
-antigen bundle colorize
-antigen bundle extract
-antigen bundle colored-man-pages
-
-#antigen bundle zdharma/fast-syntax-highlighting
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle history-substring-search
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle andrewferrier/fzf-z
-antigen bundle MichaelAquilina/zsh-you-should-use
+ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 
 
-# Load the theme.
-#antigen theme refined
-antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
 
-# Tell Antigen that you're done.
-antigen apply
+# Tell antibody that you're done.
+#antibody apply
+source ~/.zsh_plugins.sh
 
 # plugins seetings
 
@@ -89,9 +62,6 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
-#source ~/mvncolor.sh
-source ~/transfer.sh
-source ~/.fzfrc
 
 #alias j='fasd_cd -i'
 alias j='z -i'
@@ -132,6 +102,8 @@ alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+#source ~/transfer.sh
+source ~/.fzfrc
 
 
 export HISTSIZE=1000000
