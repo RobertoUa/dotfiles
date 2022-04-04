@@ -1,11 +1,12 @@
 [user]
-  email = roberto.te.ua@gmail.com
-  name = Volodymyr Barna
+	email = roberto.te.ua@gmail.com
+	name = Volodymyr Barna
 	signingkey = 87B958EC
 [alias]
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   stat = log --stat --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   dsf = "!git diff --color $@ | diff-so-fancy"
+	up = pull --rebase --autostash
 [color]
     status = auto
     diff = auto
@@ -33,16 +34,21 @@
 [github]
   user = RobertoUA
 [push]
-	default = simple
+	default = current
 
 [pager]
   ;log = diff-highlight | less
   ;show = diff-highlight | less
   ;diff = icdiff
-[branch]
-	autosetuprebase = never
 [pager]
 	diff = diff-so-fancy | less --tabs=1,5 -RFX
 	show = diff-so-fancy | less --tabs=1,5 -RFX
 [commit]
 	gpgsign = true
+[pull]
+	rebase = true
+  #rebase = preserve
+[rebase]
+	autoStash = true
+[diff "sopsdiffer"]
+	textconv = sops -d
